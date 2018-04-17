@@ -1,0 +1,1 @@
+<jsp:forward page="/IndexServlet2"></jsp:forward>

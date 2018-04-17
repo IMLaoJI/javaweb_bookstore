@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.laoji.bookstore.web.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>AutoLoginFilter</filter-name>
+        <filter-class>com.laoji.bookstore.web.filter.AutoLoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AutoLoginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>PrivilegeFilter</filter-name>
+        <filter-class>com.laoji.bookstore.web.filter.PrivilegeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>PrivilegeFilter</filter-name>
+        <url-pattern>/jsp/order_info.jsp</url-pattern>
+        <url-pattern>/jsp/order_list.jsp</url-pattern>
+        <url-pattern>/OrderServlet</url-pattern>
+        <url-pattern>/CartServlet</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/IndexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>IndexServlet2</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.IndexServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet2</servlet-name>
+        <url-pattern>/IndexServlet2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CategoryServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.CategoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CategoryServlet</servlet-name>
+        <url-pattern>/CategoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/OrderServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CallbackServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.CallbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CallbackServlet</servlet-name>
+        <url-pattern>/callback</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/CartServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DealDateServlet</servlet-name>
+        <servlet-class>com.laoji.bookstore.web.servlet.DealDateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DealDateServlet</servlet-name>
+        <url-pattern>/DealDateServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>welcome.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+</web-app>

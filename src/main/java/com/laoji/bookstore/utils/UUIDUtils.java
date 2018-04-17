@@ -1,0 +1,28 @@
+package com.laoji.bookstore.utils;
+
+import java.util.UUID;
+
+/**
+ * 生成随机字符串的工具类
+ *
+ * @author 传智.郭嘉
+ */
+public class UUIDUtils {
+    /**
+     * 获得32位随机的字符串
+     *
+     * @return
+     */
+    public static String getUUID() {
+        return UUID.randomUUID().toString().replace("-", "");
+    }
+
+    /**
+     * 获得64位随机的字符串
+     *
+     * @return
+     */
+    public static String getUUID64() {
+        return getUUID()+getUUID();
+    }
+}
